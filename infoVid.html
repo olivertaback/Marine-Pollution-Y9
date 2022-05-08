@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video</title>
+        <style>
+            html, body{
+   padding:0px;
+   margin:0px;
+   background:#191A1D;
+   font-family: 'Tahoma', sans-serif;
+   width:100vw;
+}
+body * {
+   margin:0;
+   padding:0;
+   color: white;
+}
+header {
+    font-size: 100px;
+    color: white;
+    margin-left: 45%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+#plasticVid {
+    display: none;
+}
+#oilVid {
+    display: none;
+}
+        </style>
+    </head>
+    <body>
+        <header>Choose a Video</header>
+        <div id="btns">
+            <input type="checkbox" id="plastic" onclick="showplasticVid();">
+            <label for="plastic">Plastic Waste in the Ocean</label>
+            <input type="checkbox" id="oil" onclick="showoilVid();">
+            <label for="oil">Oil Spills</label>
+        </div>
+        <div id="iframe">
+            <div id="plasticVid">
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/fsjvwQclGLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="oilVid">
+                <iframe width="1120" height="630" src="https://www.youtube.com/embed/nshSoLw0tdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <a href="finalWebsite.html">Home</a>
+        <script type="text/javascript">
+            function showplasticVid()
+            {
+                if (document.getElementById("plastic").checked == true)
+                {
+                    document.getElementById("plasticVid").style.display = "block";
+                }
+                else
+                {
+                    document.getElementById("plasticVid").style="none";
+                }
+            }
+            function showoilVid()
+            {
+                if (document.getElementById("oil").checked == true)
+                {
+                    document.getElementById("oilVid").style.display = "block";
+                }
+                else
+                {
+                    document.getElementById("oilVid").style="none";
+                }
+            }
+        </script>
+    </body>
+</html>
